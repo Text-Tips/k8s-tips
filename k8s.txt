@@ -259,7 +259,7 @@ minikube dashboard
 
 Minikube to use podman:
 -----------------------
-minikube start --driver=podman 
+minikube start --driver=podman
 minikube config set driver podman
 $ sudo visudo
 ### Then append the following to the section at the very bottom of the file where username is your user account.
@@ -444,7 +444,7 @@ deployment "kubernetes-bootcamp" scaled
 
 $ kubectl get deployments
 NAME                 DESIRED CURRENT UP-TO-DATE AVAILABLE
-kubernetes-bootcamp  2       2       2          2 
+kubernetes-bootcamp  2       2       2          2
 
 * Rolling updates:
   ----------------
@@ -611,14 +611,7 @@ data:
   # 1 - Docker login to the private registry
   # 2 - Annotate the docker config.json created (~/.docker/config.json normally)
   # 3 - copy in next line output to 'base64 ~/.docker/config.json' command
-  .dockerconfigjson: eyJhdXRocyI6eyJyZWdpc3RyeS5yZWRoYXQuaW8iOnsiYXV0aCI6Ik1URXdNRGt4TUROOGRHRnVaeTF2Y0dWeVlYUnZjaTF0YVc1cGEzVmlaUzEwWlhOMGN6cGxlVXBvWWtkamFVOXBTbE5WZWxWNFRXbEtPUzVsZVVwNlpGZ
-EphVTlwU1RWWlYwbDZXa1JCZDAxWFJtaE9NazB3VFRKRk5WbFVWVEJQUjFGNVdXMUthVTFxV21oT1JFcHJUbmxLT1M1UVRrVk1MWHBKTWxWTGVGRkJSME51YTBOWGQyeFdVbTlWU1RaNGJERjBRMFpVWXpaeUxXVkdjMU51TlVKWFdWbEtOV3AxTUdoTGF
-HdHNNRE5mUldoSlNHSmZkbVZtUWpkRlVWaFZVV2RKWkdSWVVrVm1aV3haU21WNlVIRjFNa3RZT0d4MFRHMHlaMFZIZVZSVGJtcFdkMjFqYUc1UVIzY3dSRWRHTmtOeWFVSTJZMmt5ZVUxRlRFNUpYek5rUWxCblkwdGZjMkV3TkRocVIxRjNVamRhTUVKd
-U1rSkZNbTlHT1ZoNWJGcHFhVGh5YTNneFduVlFkVmhVZFdGR2JVUm5SbWRrUVhkVVpITklTMHRYTVdZNE5XTXhNSFZzZHpadFNHVlhSV1UyYWxKTlVsUXpNSGhXTkZCUVZIQmFXbkl4Vm5veFZGaFNZV3M0UzFwTFkwSTNZVjl6WkdWUVFrNUhXbm8yTWx
-SalkwWlJiRTU1T0U5dU0ySnBlV3htT1ZGdmEzRjZjWFU0TVU1a1IxUklTbmxVU2xJMlpuTldTalJOWlVKVFR6VmpjMnRWVjBkb05rdEZNRWR5YURCcU5sbFJhbDkzTFdKb1V6TlRkbWg1U3pCa2NHcEtia05NVFZoMlFWWkNhVEpxUWkwM2JWa3lPVVV4Y
-kZwUFpWTm5ZbTFaZVZGRmVrVjJjUzF2VW5WUVltc3hWVWx2WTAwNGEwTjFRekJqYVRrM2JHVnRWVk5CZEhoTk5VcHpaVkl5VW1GUmNsQjZZak40VUZCM1dIUm5UazFHTmsxeFFtTlNkSE53Wkd0dFltbHBaMHh0U2xOeWJWZERRMWxsVUdsVFdYWXRiRVp
-sVFhFMWFFeFBZblZ6Vm5sNFdGUmlUMGR0V25FdE5WWjVjVk53T1dsQ1l6UnNNa0pqYmxocVowSnFlV2xuT1ZaYWJrWlJTRkZPTjJSQ1lqQkNTRkZKY1dsb09FOVZWbHBKUW1aMFFURnZVMmRmV1hJMlVXeDVjbGRDVm5GRFJIaHRPVXhPZDNkd1JWQnRUR
-3haWWtobU1WbEpkVk5VWkZwdFdrMVlaMjk0Y2pKWGRVaERSVzB4ZUhaak5rdDBNR3d5TjNjM2JXVTJUVkZuVFdKaVNWVnFZVlJhWkd3MFExOHdkbmxpWkdkRmVHRkJWRGQwTkZBeU9XNU1hVVJTU1VoblUxSktUbVU1VlE9PSJ9fX0=
+  .dockerconfigjson: eyJh....X0=
 type: kubernetes.io/dockerconfigjson
 
 Productization:
@@ -655,7 +648,6 @@ oc get --raw /apis/daemons.redhat.com/v1alpha1/namespaces/nbde/tangservers | jq
 oc config view
 ...
   server: https://api.ci-ln-n3gvbqk-72292.origin-ci-int-gce.dev.rhcloud.com:6443
- 
 
 Dast:
 -----
@@ -730,6 +722,7 @@ Check helm installation history:
 --------------------------------
 helm -n keylime history attestation-operator
 REVISION        UPDATED                         STATUS          CHART           APP VERSION     DESCRIPTION     
+=======
 1               Wed Nov 15 15:26:25 2023        superseded      keylime-0.1.0   latest          Install complete
 2               Wed Nov 15 15:29:10 2023        superseded      keylime-0.1.0   latest          Upgrade complete
 3               Wed Nov 15 15:30:02 2023        deployed        keylime-0.1.0   latest          Upgrade complete
@@ -792,4 +785,3 @@ Jira status refresh on PR:
 --------------------------
 /jira refresh
 /jira recheck
-
